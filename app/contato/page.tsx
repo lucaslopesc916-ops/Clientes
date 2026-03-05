@@ -1,0 +1,96 @@
+import { Phone, MapPin, Clock, Mail } from "lucide-react";
+
+export default function ContatoPage() {
+  return (
+    <div className="pt-16">
+      {/* Header */}
+      <div className="bg-gradient-to-br from-primary-600 to-primary-800 py-16 text-center text-white">
+        <h1 className="text-4xl font-extrabold mb-3">Fale Conosco</h1>
+        <p className="text-primary-100 text-lg">
+          Estamos disponíveis para atender você e seu pet.
+        </p>
+      </div>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Informações */}
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900">Informações de Contato</h2>
+
+              {[
+                {
+                  icon: Phone,
+                  title: "WhatsApp / Telefone",
+                  content: "(34) 98821-3494",
+                  link: "https://wa.me/5534988213494",
+                  color: "bg-green-100 text-green-600",
+                },
+                {
+                  icon: Mail,
+                  title: "E-mail",
+                  content: "contato@sensipet.com.br",
+                  link: "mailto:contato@sensipet.com.br",
+                  color: "bg-blue-100 text-blue-600",
+                },
+                {
+                  icon: MapPin,
+                  title: "Endereço",
+                  content: "Rua Exemplo, 123 — Bairro Centro\nUberlândia – MG",
+                  color: "bg-orange-100 text-orange-600",
+                },
+                {
+                  icon: Clock,
+                  title: "Horário de Funcionamento",
+                  content: "Seg–Sex: 08h às 18h\nSáb: 08h às 12h\nEmergência 24h todos os dias",
+                  color: "bg-purple-100 text-purple-600",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
+                  <div className={`p-3 rounded-xl h-fit ${item.color}`}>
+                    <item.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-600 hover:text-primary-600 transition-colors whitespace-pre-line"
+                      >
+                        {item.content}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-gray-600 whitespace-pre-line">{item.content}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mapa */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Localização</h2>
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-96">
+                <iframe
+                  title="Localização Sensipet"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234786.1!2d-48.27!3d-18.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a44500!2sUberl%C3%A2ndia%2C%20MG!5e0!3m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <p className="text-xs text-gray-400 mt-2 text-center">
+                * Atualize o endereço no mapa com a localização real da clínica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
