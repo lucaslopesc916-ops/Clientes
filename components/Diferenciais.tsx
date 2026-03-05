@@ -1,25 +1,26 @@
-import { Award, Users, Zap, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Clock, Users, Zap, Heart } from "lucide-react";
 
 const diferenciais = [
   {
-    icon: Award,
-    title: "Equipe especializada",
-    desc: "Médicos veterinários com pós-graduação e anos de experiência em diversas especialidades.",
+    icon: Clock,
+    title: "Atendimento até às 22h",
+    desc: "Muitas clínicas encerram o atendimento no início da noite. Na Sensipet você encontra suporte veterinário estendido para trazer mais segurança ao tutor.",
   },
   {
     icon: Zap,
-    title: "Tecnologia de ponta",
-    desc: "Equipamentos modernos para diagnósticos precisos: ultrassom, raio-x digital, endoscopia.",
+    title: "Estrutura completa",
+    desc: "Consultas, exames, acompanhamento e procedimentos realizados no mesmo local. Isso facilita o diagnóstico e o tratamento do seu pet.",
   },
   {
     icon: Users,
-    title: "Atendimento humanizado",
-    desc: "Tratamos cada pet e cada tutor com atenção, carinho e transparência em cada etapa.",
+    title: "Equipe veterinária dedicada",
+    desc: "Profissionais comprometidos com medicina veterinária responsável e atendimento acolhedor em cada consulta.",
   },
   {
-    icon: MapPin,
-    title: "Localização privilegiada",
-    desc: "Fácil acesso, estacionamento amplo e ambiente confortável para você e seu pet.",
+    icon: Heart,
+    title: "Atendimento humanizado",
+    desc: "Sabemos que os pets fazem parte da família. Nosso atendimento busca acolher tanto o animal quanto o tutor.",
   },
 ];
 
@@ -31,15 +32,17 @@ export default function Diferenciais() {
           {/* Left */}
           <div>
             <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-              Por que nos escolher
+              Por que escolher a Sensipet
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-6">
-              Referência em saúde animal na sua cidade
+              Centro Veterinário Completo para Cuidar da Saúde do Seu Pet
             </h2>
             <p className="text-gray-500 leading-relaxed mb-8">
-              A Sensipet nasceu da paixão pelos animais. Combinamos tecnologia
-              avançada com atendimento humanizado para garantir o bem-estar do
-              seu pet em cada visita.
+              A Sensipet foi criada com o objetivo de oferecer medicina
+              veterinária responsável, estrutura moderna e atendimento
+              acolhedor. Aqui o tutor encontra tudo o que precisa para cuidar
+              da saúde do seu pet em um único lugar, com acompanhamento
+              profissional e orientação clara.
             </p>
             <div className="flex gap-10">
               <div>
@@ -54,7 +57,17 @@ export default function Diferenciais() {
           </div>
 
           {/* Right */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <div className="rounded-2xl overflow-hidden mb-6 shadow-md">
+              <Image
+                src="/images/equipe.jpg"
+                alt="Equipe Sensipet Centro Veterinário"
+                width={600}
+                height={260}
+                className="w-full h-52 object-cover object-top"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {diferenciais.map((d) => (
               <div
                 key={d.title}
@@ -67,6 +80,7 @@ export default function Diferenciais() {
                 <p className="text-sm text-gray-500 leading-relaxed">{d.desc}</p>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>

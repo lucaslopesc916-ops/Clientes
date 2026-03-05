@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, PawPrint } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+
+const WA = "https://wa.me/5548996710980?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet.";
 
 const navLinks = [
   { href: "/", label: "Início" },
@@ -17,13 +20,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="bg-primary-600 p-2 rounded-lg">
-              <PawPrint className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-primary-700">Sensipet</span>
+          <Link href="/">
+            <Image src="/logo.png" alt="Sensipet Centro Veterinário" width={200} height={66} className="h-14 w-auto" priority />
           </Link>
 
           {/* Desktop Nav */}
@@ -37,12 +37,14 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/agendamento"
+            <a
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-primary-700 transition-colors"
             >
-              Agendar Consulta
-            </Link>
+              Falar no WhatsApp
+            </a>
           </nav>
 
           {/* Mobile Toggle */}
@@ -68,13 +70,15 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/agendamento"
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
             className="block bg-primary-600 text-white text-center px-5 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Agendar Consulta
-          </Link>
+            Falar no WhatsApp
+          </a>
         </div>
       )}
     </header>
