@@ -14,8 +14,8 @@ const equipe = [
   },
   {
     foto: "/images/vet3.jpg",
-    nome: "Thaina Frasson",
-    cargo: "Médica Veterinária",
+    nome: "João Vitor Lima",
+    cargo: "Médico Veterinário",
   },
 ];
 
