@@ -22,8 +22,8 @@ export default function ContatoPage() {
                 {
                   icon: Phone,
                   title: "WhatsApp / Telefone",
-                  content: "(34) 98821-3494",
-                  link: "https://wa.me/5534988213494",
+                  content: "(48) 99671-0980",
+                  link: "https://wa.me/5548996710980",
                   color: "bg-green-100 text-green-600",
                 },
                 {
@@ -36,7 +36,7 @@ export default function ContatoPage() {
                 {
                   icon: MapPin,
                   title: "Endereço",
-                  content: "Rua Exemplo, 123 — Bairro Centro\nUberlândia – MG",
+                  content: "Av. Inocente Pagnan, 201 — Centro\nMorro da Fumaça – SC, 88830-000",
                   color: "bg-orange-100 text-orange-600",
                 },
                 {
@@ -75,7 +75,7 @@ export default function ContatoPage() {
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-96">
                 <iframe
                   title="Localização Sensipet"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234786.1!2d-48.27!3d-18.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a44500!2sUberl%C3%A2ndia%2C%20MG!5e0!3m2!1spt-BR!2sbr"
+                  src="https://maps.google.com/maps?q=Av.+Inocente+Pagnan,+201,+Centro,+Morro+da+Fuma%C3%A7a,+SC,+88830-000&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

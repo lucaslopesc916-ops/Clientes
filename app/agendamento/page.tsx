@@ -157,7 +157,7 @@ export default function AgendamentoPage() {
       `*Telefone:* ${dados.telefone}\n` +
       (dados.observacoes ? `*Observações:* ${dados.observacoes}` : "")
     );
-    window.open(`https://wa.me/5534988213494?text=${msg}`, "_blank");
+    window.open(`https://wa.me/5548996710980?text=${msg}`, "_blank");
     goTo(STEPS.length - 1, "up");
   }
 
